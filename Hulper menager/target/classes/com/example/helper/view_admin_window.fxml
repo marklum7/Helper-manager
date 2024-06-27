@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main1" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.helper.controller_admin_window">
+   <children>
+      <AnchorPane prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: #000000; -fx-background-radius: 0 0 30 30;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="31.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../IMAGE/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="77.0" layoutY="10.0" prefHeight="21.0" prefWidth="65.0" text="ADMIN" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="back_button" layoutX="508.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" text="Выйти" />
+            <Text fill="#f2f2f2" layoutX="234.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="helper manager">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <TabPane fx:id="table_info" layoutY="95.0" prefHeight="305.0" prefWidth="600.0" style="-fx-background-color: transpanent;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: transpanent;" text="Пользователи">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="400.0" prefWidth="600.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="8000.0" prefWidth="600.0">
+                                 <children>
+                                    <TableView fx:id="user_table" prefHeight="380.0" prefWidth="600.0" style="-fx-background-color: transpanent;">
+                                      <columns>
+                                          <TableColumn fx:id="nom1" prefWidth="39.99997079372406" text="№" />
+                                        <TableColumn fx:id="login_1" prefWidth="252.66664505004883" text="Логин" />
+                                        <TableColumn fx:id="pass_1" prefWidth="133.3333740234375" text="Пароль" />
+                                          <TableColumn fx:id="phone_1" minWidth="2.0" prefWidth="171.33328247070312" text="Tелефон" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: transpanent;" text="Заказы">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="600.0">
+                     <children>
+                        <ScrollPane prefHeight="343.0" prefWidth="600.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="8000.0" prefWidth="600.0">
+                                 <children>
+                                    <TableView fx:id="worker_table" prefHeight="380.0" prefWidth="600.0" style="-fx-background-color: transpanent;">
+                                       <columns>
+                                          <TableColumn fx:id="nomer_2" prefWidth="39.3333740234375" text="№" />
+                                          <TableColumn fx:id="polz_2" prefWidth="44.666683197021484" text="IDпользователя" />
+                                          <TableColumn fx:id="shop_2" prefWidth="94.66663360595703" text="Магазин" />
+                                          <TableColumn fx:id="name_2" prefWidth="144.6666717529297" text="Название" />
+                                          <TableColumn fx:id="price_2" prefWidth="54.0" text="Цена" />
+                                          <TableColumn fx:id="date_2" text="Дата" />
+                                          <TableColumn fx:id="address_2" minWidth="0.0" prefWidth="128.66671752929688" text="Адресс" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="del_1" layoutX="235.0" layoutY="52.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="130.0" style="-fx-background-color: #000000;" text="Удалить" textFill="WHITE" />
+   </children>
+</AnchorPane>

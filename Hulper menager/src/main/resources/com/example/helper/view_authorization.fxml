@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.helper.controller_authorization">
+   <children>
+      <TextField fx:id="login_field" layoutX="75.0" layoutY="144.0" promptText="Логин" style="-fx-background-color: transpanent; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="password_field" layoutX="75.0" layoutY="177.0" promptText="Пароль" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000; -fx-background-color: transpanent;" />
+      <Button fx:id="entry_button" layoutX="114.0" layoutY="227.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: #000000;" text="Войти" textFill="WHITE" />
+      <Hyperlink fx:id="registration_button" layoutX="18.0" layoutY="268.0" text="У вас нет учетной записи? Зарегистрируйтесь!" textFill="#000000f2" />
+      <Text layoutX="83.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="helper manager">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="101.0" fitWidth="101.0" layoutX="100.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IMAGE/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="45.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IMAGE/login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="45.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IMAGE/password.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="erorr" fill="RED" layoutX="67.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="225.33333333333348">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
